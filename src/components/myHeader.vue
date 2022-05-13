@@ -1,71 +1,121 @@
 <template>
-<div class="myHeader">
 
-  <img src="../assets/img/dc-logo.png" alt="DC_Logo">
-
-  <nav>
+<header>
+  <div class="header-container">
+    <img src="../assets/img/dc-logo.png" alt="DC_Logo">
     <ul>
-      <li><a href="#">Characters</a></li>
-      <li><a href="#" class="isActive">Comics</a></li>
-      <li><a href="#">Movies</a></li>
-      <li><a href="#">Tv</a></li>
-      <li><a href="#">Games</a></li>
-      <li><a href="#">Collectibles</a></li>
-      <li><a href="#">Videos</a></li>
-      <li><a href="#">Fans</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Shop</a></li>
+      <li v-for="(options, index) in menu" :key="`menu-${index}`">
+        <a :class="{'menuActive' : options.isActive}" :href="options.href">{{options.select}}</a>
+      </li>
     </ul>
-  </nav>
+  </div>
+</header>
 
-</div>
 </template>
 
 <script>
 export default {
-  name: "myHeader"
+  name: "myHeader",
+  data(){
+    return{
+      menu: [
+        {
+          select: "Characters",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "Comics",
+          href: "#",
+          isActive: true
+        },
+        {
+          select: "Movies",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "Tv",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "Games",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "Collectibles",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "Videos",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "Fans",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "News",
+          href: "#",
+          isActive: false
+        },
+        {
+          select: "Shop",
+          href: "#",
+          isActive: false
+        }
+      ]
+    }
+  }
 }
 </script>
 
 <style lang="scss">
 
-.myHeader{
+.header-container{
   display: flex;
-  background-color: antiquewhite;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
   margin: 0 auto;
 }
 
-.myHeader img{
+.header-container img{
   padding: 10px;
   width: 6rem;
 }
 
-.myHeader ul{
+.header-container ul{
   display: flex;
   list-style: none;
   height: 100%;
 }
 
-.myHeader li{
+.header-container li{
   text-decoration: none;
   text-transform: uppercase;
   height: 100%;
   padding: 0px 10px;
 }
 
-.myHeader a{
+.header-container a{
   text-decoration: none;
   color: black;
   font-size: .9rem;
   border-bottom: 4px solid transparent;
   padding: 35px 0px;
 
-  &.isActive{
+  &.menuActive{
     color: #0282F9;
     border-bottom: 4px solid #0282F9;
+  }
+
+  &:hover{
+    color: #0282F9;
   }
 }
 
