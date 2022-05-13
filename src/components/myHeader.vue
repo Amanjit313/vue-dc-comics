@@ -1,15 +1,15 @@
 <template>
 
-<header>
-  <div class="header-container">
-    <img src="../assets/img/dc-logo.png" alt="DC_Logo">
-    <ul>
-      <li v-for="(options, index) in menu" :key="`menu-${index}`">
-        <a :class="{'menuActive' : options.isActive}" :href="options.href">{{options.select}}</a>
-      </li>
-    </ul>
-  </div>
-</header>
+  <header>
+    <div class="header-container">
+      <img src="../assets/img/dc-logo.png" alt="DC_Logo">
+      <ul>
+        <li v-for="(options, index) in menu" :key="`menu-${index}`">
+          <a :class="{'menuActive' : options.isActive}" :href="options.href">{{options.select}}</a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
 </template>
 

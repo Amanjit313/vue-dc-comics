@@ -1,5 +1,11 @@
 <template>
-  <h1>MAIN</h1>
+
+  <main>
+    <div class="main-container">
+      <h1>Content goes here!</h1>
+      </div>
+  </main>
+
 </template>
 
 <script>
@@ -8,6 +14,17 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+main{
+  background-color: #1C1C1C;
+  display: flex;
+  align-items: center;
+}
+
+.main-container h1{
+  color: white;
+  padding: 50px 0px;
+}
 
 </style>
