@@ -1,8 +1,8 @@
 <template>
 
   <header>
-    <div class="header-container">
-      <img src="../assets/img/dc-logo.png" alt="DC_Logo">
+    <div class="header-container w-70">
+      <img src="../assets/img/dc-logo.png" alt="dc-logo">
       <ul>
         <li v-for="(options, index) in menu" :key="`menu-${index}`">
           <a :class="{'menuActive' : options.isActive}" :href="options.href">{{options.select}}</a>
@@ -91,7 +91,6 @@ export default {
 
 .header-container ul{
   display: flex;
-  list-style: none;
   height: 100%;
 }
 
@@ -103,7 +102,6 @@ export default {
 }
 
 .header-container a{
-  text-decoration: none;
   color: black;
   font-size: .9rem;
   border-bottom: 4px solid transparent;
@@ -118,6 +116,5 @@ export default {
     color: #0282F9;
   }
 }
-
 
 </style>

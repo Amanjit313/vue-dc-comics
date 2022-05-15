@@ -1,7 +1,13 @@
-.header-container,
-.main-container,
-.footer-container{
+.w-70{
   max-width: 1200px;
   width: 70%;
   margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
 }
