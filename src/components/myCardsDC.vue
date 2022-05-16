@@ -96,7 +96,7 @@ export default {
 .card-container{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 250px;
+  margin-top: 300px;
 }
 
 .cards{
@@ -114,7 +114,8 @@ img{
 p{
   color: white;
   text-transform: uppercase;
-  width: 20vh; 
+  width: 20vh;
+  font-size: .9rem;
 }
 
 </style>
