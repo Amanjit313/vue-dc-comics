@@ -135,7 +135,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .icon-options{
   background-color: #0282F9;
@@ -204,7 +204,6 @@ export default {
 }
 
 .logo img{
-  /* width: 25rem; */
   width: 600px; 
   height: 450px; 
   object-fit: cover;
