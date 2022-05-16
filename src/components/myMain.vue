@@ -29,7 +29,6 @@ export default {
 main{
   background-color: #1C1C1C;
   align-items: center;
-  position: relative;
 }
 
 img{
@@ -46,19 +45,20 @@ img{
 }
 
 .current-series-btn{
-  bottom: 62%;
+  bottom: 52%;
   left: 18%;
   position: absolute;
   font-size: 1.1rem;
 }
 
 .myCards-container{
-  height: 550px;
+  min-height: 550px;
+  position: relative;
 }
 
 .myCards-container p{
   text-align: center;
-  margin-top: 50px;
+  padding: 50px;
 }
 
 .myCards-container a,
@@ -66,7 +66,6 @@ img{
   color: white;
   background-color: #0282F9;
   padding: 10px 35px;
-  margin-bottom: 50px;
   text-transform: uppercase;
 }
 
