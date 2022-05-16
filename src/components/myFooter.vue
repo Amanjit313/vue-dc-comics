@@ -204,7 +204,10 @@ export default {
 }
 
 .logo img{
-  width: 25rem;
+  /* width: 25rem; */
+  width: 600px; 
+  height: 450px; 
+  object-fit: cover;
 }
 
 .footer-socials-sign-up{
